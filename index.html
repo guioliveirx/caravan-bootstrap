@@ -59,8 +59,29 @@
     </header>
     <main>
         <!-- HERO SECTION -->
-        <section>
-            
+         <!-- Cria um container que ocupa toda ViewWidth do site -->
+        <section id="hero-section" class="container-fluid text-white">
+            <!-- Cria um grid flex-box dividido em 12 colunas que ocupa todo o container-->
+            <div class="row">
+                <!-- Separa 7/12 colunas para conter o conteúdo da div -->
+                <div class="col-7 bg-white">a</div>
+                <!-- Separa 5/12 colunas para conter o conteúdo da div. É ativado quando atinge o breakpoint do "lg"-->
+                <div class="col-lg-5 bg-dark p-4">
+                    <!-- Aumenta o tamanho do H1 -->
+                    <h1 class="display-4">Realize a viagem do seu sonho</h1>
+                    <!-- Fornece um destaque maior para o parágrafo -->
+                    <p class="lead">O melhor local para viajar é com a Caravan, mais de 5.000 excursões concluídas.</p>
+                    <form action="#">
+                        <!-- Padrão que estiliza um grupo de inputs -->
+                        <div class="input-group">
+                            <!-- Cria um padrão de input ajustável de acordo com a quantidade de elementos membros do grupo -->
+                            <input class="form-control" type="text" name="text" id="itext" placeholder="E-mail" aria-label="Inserir um E-mail" aria-describedby="botao-enviar">
+                            <!-- Cria um estilo de botão que ficará ao lado do input text-->
+                            <input type="submit" class="btn btn-primary" value="Inscreva-se" id="botao-enviar">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
         <!-- END HERO SECTION -->
     </main>
