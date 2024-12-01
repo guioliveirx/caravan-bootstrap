@@ -9,6 +9,11 @@
 </head>
 <body>
     <header>
+        <!--
+            *navbar -> Inicializa uma navbar.
+            *navbar-expand-md -> Adiciona um tamanho mínimo para quebrar a linha e ajusta o conteudo no começo.
+            *fixed-top -> Aplica um position fidex no topo do conteudo.
+         -->
         <nav class="navbar navbar-expand-md fixed-top box-shadow bg-body-tertiary">
             <div class="container-lg">
                 <a href="index.html" target="_self" rel="noopener noreferrer" class="navbar-brand">
@@ -64,7 +69,37 @@
             <!-- Cria um grid flex-box dividido em 12 colunas que ocupa todo o container-->
             <div class="row">
                 <!-- Separa 7/12 colunas para conter o conteúdo da div -->
-                <div class="col-7 bg-white">a</div>
+                <div class="col-lg-7 bg-white p-0">
+                    <div id="carousel-cities" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carousel-cities" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="assets/image/california.jpg" class="d-block w-100" alt="Imagem da California">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="display-6">California</h5>                            
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/image/dublin.jpg" class="d-block w-100" alt="Imagem de Dublin">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/image/paris.jpg" class="d-block w-100" alt="Imagem de Paris">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-cities" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-cities" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Próximo</span>
+                        </button>
+                      </div>
+                </div>
                 <!-- Separa 5/12 colunas para conter o conteúdo da div. É ativado quando atinge o breakpoint do "lg"-->
                 <div class="col-lg-5 bg-dark p-4">
                     <!-- Aumenta o tamanho do H1 -->
