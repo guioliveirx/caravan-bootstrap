@@ -37,9 +37,13 @@
                             <ul class="dropdown-menu">
                                 <!-- Itens que serão exibidos no meu dropdown. ".dropdown-item" adiciona as propriedades dos itens. -->
                                 <li><a href="#" class="dropdown-item">California</a></li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <li><a href="#" class="dropdown-item">Paris</a></li>
-                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
                                 <li><a href="#" class="dropdown-item">Noruega</a></li>
                             </ul>
                         </li>
@@ -56,7 +60,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" target="_self" rel="noopener noreferrer" aria-current="page">
+                            <a class="nav-link" href="#" target="_self" data-bs-toggle="modal"
+                                data-bs-target="#modal-login" rel="noopener noreferrer" aria-current="page">
                                 Login
                             </a>
                         </li>
@@ -122,7 +127,7 @@
                     </div>
                 </div>
                 <!-- Separa 5/12 colunas para conter o conteúdo da div. É ativado quando atinge o breakpoint do "lg"-->
-                <div class="col-lg-5 align-self-center p-4">
+                <div class="col-lg-5 d-flex justify-content-center align-self-center p-4">
                     <div style="max-width: 650px;">
                         <!-- Aumenta o tamanho do H1 -->
                         <h1 class="display-4 ">Realize a viagem do seu sonho</h1>
@@ -144,6 +149,38 @@
             </div>
         </section>
         <!-- END HERO SECTION -->
+
+        <!-- MODAL -->
+        <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-titulo" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modal-login-titulo">Entre na sua conta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                >
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" >
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Lembrar da Conta</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar na Conta</button>
+                            <p class="text-secondary"><small>Não possui uma conta? <a href="http://" target="_blank" rel="noopener noreferrer">Criar Conta</a></small></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL END -->
 
         <!-- ABOUT SECTION -->
         <section id="about-section" class="py-5 bg-light text-center">
@@ -223,8 +260,9 @@
             <div id="accordion-main" class="row row-cols-1 justify-content-center accordion px-md-0 px-3">
                 <div class="col accordion-item p-0 ">
                     <h2 class="accordion-header">
-                        <button class="accordion-button bg-light text-primary " type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
                             É possível cancelar a viagem?
                         </button>
                     </h2>
@@ -238,8 +276,9 @@
                 </div>
                 <div class="col accordion-item p-0 ">
                     <h2 class="accordion-header">
-                        <button class="accordion-button bg-light text-primary " type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                            aria-controls="collapseTwo">
                             Qual a garantia que tenho se perder o voo?
                         </button>
                     </h2>
@@ -253,8 +292,9 @@
                 </div>
                 <div class="col accordion-item p-0 ">
                     <h2 class="accordion-header">
-                        <button class="accordion-button bg-light text-primary " type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                            aria-controls="collapseThree">
                             Qual a principal forma de viagem?
                         </button>
                     </h2>
@@ -268,8 +308,9 @@
                 </div>
                 <div class="col accordion-item p-0 ">
                     <h2 class="accordion-header">
-                        <button class="accordion-button bg-light text-primary " type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFor" aria-expanded="true" aria-controls="collapseFore">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFor" aria-expanded="true"
+                            aria-controls="collapseFore">
                             Qual o melhor destino de viagem?
                         </button>
                     </h2>
@@ -283,8 +324,9 @@
                 </div>
                 <div class="col accordion-item p-0 ">
                     <h2 class="accordion-header">
-                        <button class="accordion-button bg-light text-primary " type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                            aria-controls="collapseFive">
                             Vocês dão descontos para grupos grandes?
                         </button>
                     </h2>
@@ -344,9 +386,12 @@
                             Redes Sociais
                         </h4>
                         <ul class="list-unstyled d-grid row-gap-2">
-                            <li><a class="btn btn-outline-secondary btn-sm d-block" style="max-width: 140px;" href="#" target="_self" rel="noopener noreferrer">Instagram</a></li>
-                            <li><a class="btn btn-outline-secondary btn-sm d-block " style="max-width: 140px;" href="#" target="_self" rel="noopener noreferrer">X</a></li>
-                            <li><a class="btn btn-outline-secondary btn-sm d-block" style="max-width: 140px;"  href="#" target="_self" rel="noopener noreferrer">Youtube</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm d-block" style="max-width: 140px;" href="#"
+                                    target="_self" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm d-block " style="max-width: 140px;" href="#"
+                                    target="_self" rel="noopener noreferrer">X</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm d-block" style="max-width: 140px;" href="#"
+                                    target="_self" rel="noopener noreferrer">Youtube</a></li>
                         </ul>
                     </div>
                 </div>
