@@ -21,3 +21,18 @@ body{
         font-weight: 400;
     }
 }
+
+/* Primeira forma de não colocar a borda no último item */
+.list-plans :not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0,0.09);
+}
+
+/* Segunda forma de não colocar a borda no último item */
+/* Só irá adicionar borda em elemento que possuem um li como próximo elemento */
+/* .list-plans li + li{
+        border-bottom: 1px solid rgba(0,0,0,0.09); 
+    } */
+
+.list-plans li{
+    padding: 10px;
+}
