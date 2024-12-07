@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caravan</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <!--
+            *navbar -> Inicializa uma navbar.
+            *navbar-expand-md -> Adiciona um tamanho mínimo para quebrar a linha e ajusta o conteudo no começo.
+            *fixed-top -> Aplica um position fidex no topo do conteudo.
+         -->
+        <nav class="navbar navbar-expand-md fixed-top box-shadow bg-body-tertiary">
+            <div class="container-lg">
+                <a href="/index.html" target="_self" rel="noopener noreferrer" class="navbar-brand">
+                    <img src="/assets/icons/caravan.svg" alt="Logo Caravan">
+                </a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-content" type="button"
+                    aria-controls="navbar-content" aria-expanded="false" aria-label="Menu suspenso">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbar-content" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <!-- Gatilho que ativará um "display=block" e "data-bs-popper=static" no menu suspenso-->
+                            <a class="nav-link dropdown-toggle" href="#" target="_self" rel="noopener noreferrer"
+                                data-bs-toggle="dropdown" role="button" aria-current="page">
+                                Locais
+                            </a>
+                            <!-- Menu suspenso que ficará com "display=none" até que o gatilho seja ativado. -->
+                            <ul class="dropdown-menu">
+                                <!-- Itens que serão exibidos no meu dropdown. ".dropdown-item" adiciona as propriedades dos itens. -->
+                                <li><a href="local.html" class="dropdown-item" target="_self"
+                                        rel="noopener noreferrer">Dublin</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a href="local.html" class="dropdown-item">Paris</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a href="local.html" class="dropdown-item">California</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="planos.html" target="_self" rel="noopener noreferrer"
+                                aria-current="page">
+                                Planos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contato.html" target="_self" rel="noopener noreferrer"
+                                aria-current="page">
+                                Contato
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" target="_self" data-bs-toggle="modal"
+                                data-bs-target="#modal-login" rel="noopener noreferrer" aria-current="page">
+                                Login
+                            </a>
+                        </li>
+                        <hr>
+                        <li class="nav-item ms-auto">
+                            <a class="btn btn-outline-primary ms-md-3" href="inscrever.html" target="_self"
+                                rel="noopener noreferrer" aria-current="page">
+                                Inscreva-se
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- MODAL -->
+        <div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-titulo" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modal-login-titulo">Entre na sua conta</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Lembrar da Conta</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Entrar na Conta</button>
+                            <p class="text-secondary"><small>Não possui uma conta? <a href="http://" target="_blank"
+                                        rel="noopener noreferrer">Criar Conta</a></small></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL END -->
+
+        <!-- CONTACT SECTION -->
+        <section class="container-md">
+            <div class="my-5 text-center">
+                <span class="text-uppercase h6 d-block">Possui alguma dúvida?</span>
+                <h2 class="display-3 text-primary">Fale Conosco</h2>
+            </div>
+            <div class="row row-gap-5">
+                <!-- Formulário -->
+                <div class="col-lg">
+                    <form class="bg-light p-4 box-shadow bordered rounded" action="">
+                        <div class="mb-3">
+                            <label for="cliente-nome" class="form-label">Nome</label>
+                            <input type="email" class="form-control" id="cliente-nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cliente-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="cliente-email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="cliente-descricao" class="form-label">Mensagem</label>
+                            <textarea class="form-control" name="icliente-descricao" id="cliente-descricao" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                <!-- Mapa -->
+                <div class="col-lg">
+                    <h2 class="h6 text-uppercase mb-3">Nosso endereço</h2>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <img class="img-fluid box-shadow rounded mb-3" src="/assets/image/mapa.png" alt="Endereço de São Paulo">
+                    </a>
+                    <h2 class="h6 text-uppercase">
+                        Dados de Contato
+                    </h2>
+                    <ul class="list-unstyled text-secondary">
+                        <li>caravan@caravan.com.br</li>
+                        <li>21 99999-9999</li>
+                        <li>Segunda à Sexta</li>
+                        <li>8h às 18h</li>
+                    </ul>
+                    <h4 class="h6 text-uppercase mb-3">
+                        Redes Sociais
+                    </h4>
+                    <ul class="social-buttons list-unstyled d-grid row-gap-2">
+                        <li><a class="btn btn-outline-secondary btn-sm d-block" href="#"
+                                target="_self" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a class="btn btn-outline-secondary btn-sm d-block " href="#"
+                                target="_self" rel="noopener noreferrer">X</a></li>
+                        <li><a class="btn btn-outline-secondary btn-sm d-block"  href="#"
+                                target="_self" rel="noopener noreferrer">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION END -->
+
+        <!-- FAQ SECTION -->
+        <section id="faq-section" class="container">
+            <div class="my-5 text-center">
+                <span class="text-uppercase h6 d-block">Ainda está com dúvidas?</span>
+                <h2 class="display-3 text-primary">Perguntas Frequentes</h2>
+            </div>
+            <div id="accordion-main" class="row row-cols-1 justify-content-center accordion px-md-0 px-3">
+                <div class="col accordion-item p-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            É possível cancelar a viagem?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordion-main">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eaque iusto quod
+                            quaerat dolores assumenda cum iste velit possimus nesciunt rem expedita, nemo incidunt
+                            adipisci voluptatem repellendus repellat officiis dolorum?
+                        </div>
+                    </div>
+                </div>
+                <div class="col accordion-item p-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                            aria-controls="collapseTwo">
+                            Qual a garantia que tenho se perder o voo?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordion-main">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eaque iusto quod
+                            quaerat dolores assumenda cum iste velit possimus nesciunt rem expedita, nemo incidunt
+                            adipisci voluptatem repellendus repellat officiis dolorum?
+                        </div>
+                    </div>
+                </div>
+                <div class="col accordion-item p-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                            aria-controls="collapseThree">
+                            Qual a principal forma de viagem?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion-main">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eaque iusto quod
+                            quaerat dolores assumenda cum iste velit possimus nesciunt rem expedita, nemo incidunt
+                            adipisci voluptatem repellendus repellat officiis dolorum?
+                        </div>
+                    </div>
+                </div>
+                <div class="col accordion-item p-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFor" aria-expanded="true"
+                            aria-controls="collapseFore">
+                            Qual o melhor destino de viagem?
+                        </button>
+                    </h2>
+                    <div id="collapseFor" class="accordion-collapse collapse " data-bs-parent="#accordion-main">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eaque iusto quod
+                            quaerat dolores assumenda cum iste velit possimus nesciunt rem expedita, nemo incidunt
+                            adipisci voluptatem repellendus repellat officiis dolorum?
+                        </div>
+                    </div>
+                </div>
+                <div class="col accordion-item p-0 ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light text-primary " type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                            aria-controls="collapseFive">
+                            Vocês dão descontos para grupos grandes?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse " data-bs-parent="#accordion-main">
+                        <div class="accordion-body">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem eaque iusto quod
+                            quaerat dolores assumenda cum iste velit possimus nesciunt rem expedita, nemo incidunt
+                            adipisci voluptatem repellendus repellat officiis dolorum?
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-5">
+                    <p class="text-uppercase small mb-2"><strong>Fale conosco para mais dúvdas</strong></p>
+                    <a class="btn btn-primary btn-lg" href="#">Entre em Contato</a>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ SECTION END  -->
+
+        <!-- FOOTER SECTION -->
+        <footer class="text-bg-dark">
+            <div class="container py-4">
+                <div class="row row-gap-4">
+                    <div class="col-md-3 col-6">
+                        <h4 class="h6 text-uppercase">
+                            Páginas
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li><a href="planos.html">Planos</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a href="inscricao.html">Inscreva-se</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <h4 class="h6 text-uppercase">
+                            Locais
+                        </h4>
+                        <ul class="list-unstyled">
+                            <li><a href="local.html">California</a></li>
+                            <li><a href="local.html">Paris</a></li>
+                            <li><a href="local.html">Dublin</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12">
+                        <h4 class="h6 text-uppercase">
+                            Dados de Contato
+                        </h4>
+                        <ul class="list-unstyled text-secondary">
+                            <li>caravan@caravan.com.br</li>
+                            <li>21 99999-9999</li>
+                            <li>Segunda à Sexta</li>
+                            <li>8h às 18h</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-sm-6 col-12">
+                        <h4 class="h6 text-uppercase">
+                            Redes Sociais
+                        </h4>
+                        <ul class="social-buttons list-unstyled d-grid row-gap-2">
+                            <li><a class="btn btn-outline-secondary btn-sm d-block" href="#"
+                                    target="_self" rel="noopener noreferrer">Instagram</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm d-block " href="#"
+                                    target="_self" rel="noopener noreferrer">X</a></li>
+                            <li><a class="btn btn-outline-secondary btn-sm d-block" href="#"
+                                    target="_self" rel="noopener noreferrer">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-bg-primary text-center py-3">
+                <p class="m-0 small">Copyright © 2024. Alguns direitos reservados.</p>
+            </div>
+        </footer>
+        <!-- FOOTER SECTION END -->
+    </main>
+
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>

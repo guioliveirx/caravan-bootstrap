@@ -22,6 +22,12 @@ body{
     }
 }
 
+@media (width > 575px){
+    .social-buttons{
+        max-width: 200px;
+    }
+}
+
 /* Primeira forma de não colocar a borda no último item */
 .list-plans :not(:last-child){
     border-bottom: 1px solid rgba(0,0,0,0.09);
@@ -35,4 +41,8 @@ body{
 
 .list-plans li{
     padding: 10px;
+}
+
+#cliente-descricao{
+    resize: none;
 }
