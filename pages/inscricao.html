@@ -68,7 +68,7 @@
                         </li>
                         <hr>
                         <li class="nav-item ms-auto">
-                            <a class="btn btn-outline-primary ms-md-3" href="inscrever.html" target="_self"
+                            <a class="btn btn-outline-primary ms-md-3" href="inscricao.html" target="_self"
                                 rel="noopener noreferrer" aria-current="page">
                                 Inscreva-se
                             </a>
@@ -119,7 +119,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-7">
-                    <form class="row row-gap-4" action="">
+                    <form class="row row-gap-3" action="">
+                        <!-- Formulário de Dados Pessoais -->
                         <div class="col-sm-6">
                             <label for="input-nome" class="form-label">Nome</label>
                             <input type="email" class="form-control" id="input-nome" placeholder="Nome Completo">
@@ -160,6 +161,26 @@
                             <label for="input-cep" class="form-label">CEP</label>
                             <input type="text" class="form-control" name="icep" id="input-cep" placeholder="xxxx-xxx"> 
                         </div>
+                    </form>
+                    <form action="">
+                        <div class="bg-light rounded box-shadow p-3 mt-4">
+                            <h2 class="h6 text-primary text-uppercase">
+                                Forma de Pagamento
+                            </h2>
+                            <!-- Botões Pagamento -->
+                            <nav class="nav btn-group btn-group-sm mb-3" id="forma-pagamento" role="tablist">
+                                <button class="btn btn-secondary active" id="pagamento-credito-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-credito" role="tab" aria-controls="pagamento-credito" aria-selected="true">Cartão de Crédito</button>
+
+                                <button class="btn btn-secondary" id="pagamento-boleto-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-boleto" role="tab" aria-controls="pagamento-boleto" aria-selected="false">Boleto Bancário</button>
+                            </nav>
+                            <!-- Conteudos dos Botões de Pagamento -->
+                            <div class="tab-content" id="pagamento-conteudo">
+                                <div class="tab-pane fade show active" id="pagamento-credito" role="tabpanel" aria-labelledby="pagamento-credito-tab" tabindex="0">a</div>
+                                <div class="tab-pane fade" id="pagamento-boleto" role="tabpanel" aria-labelledby="forma-pagamento-boleto-tab" tabindex="0">
+                                    <p class="lead"><small>Clique em contratar plano que enviaremos um boleto para o seu e-mail.</small></p>
+                                </div>
+                            </div>
+                        </div> 
                     </form>
                 </div>
             </div>
