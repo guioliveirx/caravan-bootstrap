@@ -162,26 +162,89 @@
                             <input type="text" class="form-control" name="icep" id="input-cep" placeholder="xxxx-xxx"> 
                         </div>
                     </form>
-                    <form action="">
-                        <div class="bg-light rounded box-shadow p-3 mt-4">
-                            <h2 class="h6 text-primary text-uppercase">
-                                Forma de Pagamento
-                            </h2>
-                            <!-- Botões Pagamento -->
-                            <nav class="nav btn-group btn-group-sm mb-3" id="forma-pagamento" role="tablist">
-                                <button class="btn btn-secondary active" id="pagamento-credito-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-credito" role="tab" aria-controls="pagamento-credito" aria-selected="true">Cartão de Crédito</button>
+                    <!-- Formas de Pagamento -->
+                    <div class="bg-light rounded box-shadow p-3 mt-4 mb-3">
+                        <h2 class="h6 text-primary text-uppercase">
+                            Forma de Pagamento
+                        </h2>
+                        <!-- Botões Pagamento -->
+                        <nav class="nav btn-group btn-group-sm mb-3" id="forma-pagamento" role="tablist">
+                            <button class="btn btn-secondary active" id="pagamento-credito-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-credito" role="tab" aria-controls="pagamento-credito" aria-selected="true">Cartão de Crédito</button>
 
-                                <button class="btn btn-secondary" id="pagamento-boleto-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-boleto" role="tab" aria-controls="pagamento-boleto" aria-selected="false">Boleto Bancário</button>
-                            </nav>
-                            <!-- Conteudos dos Botões de Pagamento -->
-                            <div class="tab-content" id="pagamento-conteudo">
-                                <div class="tab-pane fade show active" id="pagamento-credito" role="tabpanel" aria-labelledby="pagamento-credito-tab" tabindex="0">a</div>
-                                <div class="tab-pane fade" id="pagamento-boleto" role="tabpanel" aria-labelledby="forma-pagamento-boleto-tab" tabindex="0">
-                                    <p class="lead"><small>Clique em contratar plano que enviaremos um boleto para o seu e-mail.</small></p>
-                                </div>
+                            <button class="btn btn-secondary" id="pagamento-boleto-tab" type="button" data-bs-toggle="tab" data-bs-target="#pagamento-boleto" role="tab" aria-controls="pagamento-boleto" aria-selected="false">Boleto Bancário</button>
+                        </nav>
+                        <!-- Conteudos dos Botões de Pagamento -->
+                        <div class="tab-content" id="pagamento-conteudo">
+                            <!-- Cartão de Crédito -->
+                            <div class="tab-pane fade show active" id="pagamento-credito" role="tabpanel" aria-labelledby="pagamento-credito-tab" tabindex="0">
+                                <form class="row row-gap-3">
+                                    <!-- Nome no Cartão -->
+                                    <div class="col-sm-6">
+                                        <label for="input-nome-cartao" class="form-label">Nome no Cartão</label>
+                                        <input type="text" class="form-control" name="inomecartao" id="input-nome-cartao" placeholder="Nome impreso no cartão"> 
+                                    </div>
+                                    <!-- Mês de Validade -->
+                                    <div class="col-md-3 col-6">
+                                        <label for="input-validade-mes" class="form-label">Mês</label>
+                                        <select name="ivalidadeMes" id="input-validade-mes" class="form-select" aria-label="Opção de cidades">
+                                            <option selected disabled>Expira mês ...</option>
+                                            <option value="janeiro">Janeiro</option>
+                                            <option value="fevereiro">Fevereiro</option>
+                                            <option value="marco">Março</option>
+                                            <option value="abril">Abril</option>
+                                            <option value="maio">Maio</option>
+                                            <option value="junho">Junho</option>
+                                            <option value="julho">Julho</option>
+                                            <option value="agosto">Agosto</option>
+                                            <option value="setembro">Setembro</option>
+                                            <option value="outubro">Outubro</option>
+                                            <option value="novembro">Novembro</option>
+                                            <option value="dezembro">Dezembro</option>
+                                        </select>  
+                                    </div>
+                                    <!-- Ano de Validade -->
+                                    <div class="col-md-3 col-6">
+                                        <label for="input-validade-ano" class="form-label">Ano</label>
+                                        <select name="ivalidadeAno" id="input-validade-ano" class="form-select" aria-label="Opção de anos de validade">
+                                            <option selected disabled>Expira ano ...</option>
+                                            <option value="janeiro">2025</option>
+                                            <option value="fevereiro">2026</option>
+                                            <option value="marco">2027</option>
+                                            <option value="abril">2028</option>
+                                            <option value="maio">2029</option>
+                                            <option value="junho">2030</option>
+                                            <option value="julho">2031</option>
+                                            <option value="agosto">2032</option>
+                                            <option value="setembro">2033</option>
+                                            <option value="outubro">2034</option>
+                                            <option value="novembro">2035</option>
+                                            <option value="dezembro">2036</option>
+                                        </select>  
+                                    </div>
+                                    <!-- Número do Cartão -->
+                                    <div class="col-sm-6">
+                                        <label for="input-numero-cartao" class="form-label">Número no cartão</label>
+                                        <input type="number" class="form-control" name="inumeroCartao" id="input-numero-cartao" placeholder="5555 5555 5555 5555"> 
+                                    </div>
+                                    <!-- Código de Segurança -->
+                                    <div class="col-sm-6">
+                                        <label for="input-codigo-seguranca" class="form-label">Código de Segurança</label>
+                                        <input type="number" class="form-control" name="icodigoSeguranca" id="input-codigo-seguranca" placeholder="XXX"> 
+                                    </div>                                    
+                                </form>
                             </div>
-                        </div> 
-                    </form>
+                            <!-- Boleto Bancário -->
+                            <div class="tab-pane fade" id="pagamento-boleto" role="tabpanel" aria-labelledby="forma-pagamento-boleto-tab" tabindex="0">
+                                <p class="lead"><small>Clique em contratar plano que enviaremos um boleto para o seu e-mail.</small></p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <!-- Concordar com os Termos -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Concordo com os <a href="#">Termos e condições</a>.</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Contratar Plano</button>
                 </div>
             </div>
         </section>
