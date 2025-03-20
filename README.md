@@ -22,6 +22,7 @@ Para acessar o deploy: [Caravan](https://caravanstrip.vercel.app/)
 ## Autores e Agradecimentos
 
 - [guioliveirx](https://github.com/guioliveirx)
+- [Origamid](https://www.origamid.com/)
 
 Obrigado por ter chegado até aqui! 
 
@@ -29,9 +30,7 @@ Esse projeto foi feito com carinho e atenção, mas acima disso, com profissiona
 
 #
 
-![BOOTSTRAP5](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white) ![SASS](https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
+![Badges](https://skillicons.dev/icons?i=bootstrap,html,css)
 
 
 
